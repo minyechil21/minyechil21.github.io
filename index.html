@@ -6,109 +6,169 @@
   <title>Minyechil Alehegn Tefera</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f7f9fc;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background: #f6f8fc;
     }
+
+    .navbar {
+      background-color: #174a7c;
+      overflow: hidden;
+      padding: 12px 0;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      background-color: #0f2f50;
+    }
+
     .container {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 40px auto;
-      background: white;
-      border: 1px solid #ccc;
+      background-color: #fff;
       padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border: 1px solid #ccc;
     }
-    .header {
+
+    .profile {
       display: flex;
       justify-content: space-between;
     }
-    .info {
+
+    .left {
+      flex: 2;
+      padding-right: 20px;
+    }
+
+    .right {
       flex: 1;
+      text-align: center;
     }
-    .info h1 {
-      color: #2a4d9b;
-      margin-bottom: 0;
-    }
-    .info p {
-      margin: 6px 0;
-      line-height: 1.5;
-    }
-    .info a {
-      color: #1a5ca4;
-      text-decoration: none;
-      margin-right: 10px;
-    }
-    .profile-img {
-      width: 180px;
-      height: 220px;
-      object-fit: cover;
+
+    .right img {
+      max-width: 180px;
+      height: auto;
       border-radius: 4px;
     }
-    h2 {
+
+    h1 {
       color: #2a4d9b;
       border-bottom: 1px solid #ccc;
       padding-bottom: 5px;
-      margin-top: 40px;
+      margin-top: 0;
     }
+
+    .info p {
+      margin: 6px 0;
+      line-height: 1.4;
+    }
+
+    .info a {
+      color: #1a5ca4;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    .section-title {
+      color: #2a4d9b;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 40px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
     .highlight {
       color: red;
       font-weight: bold;
       margin-top: 20px;
     }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Publications</a>
+    <a href="#">Research</a>
+    <a href="#">Teaching</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- Main Content -->
   <div class="container">
-    <div class="header">
-      <div class="info">
+
+    <div class="profile">
+      <div class="left">
         <h1>Minyechil Alehegn Tefera</h1>
-        <p>PhD Candidate, Department of Electrical Engineering</p>
-        <p>National Taipei University of Technology, Taiwan</p>
-        <p><strong>Email:</strong> minyechil21@gmail.com</p>
-        <p><strong>Phone:</strong> +886905234223</p>
-        <p>
-          <a href="assets/CV-Minyechil Alehegn Tefera.pdf" target="_blank">[CV]</a>
-          <a href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en" target="_blank">[Google Scholar]</a>
-          <a href="https://github.com/minyechil21" target="_blank">[GitHub]</a>
-        </p>
+        <div class="info">
+          <p>PhD Candidate, Department of Electrical Engineering</p>
+          <p>National Taipei University of Technology, Taiwan</p>
+          <p><strong>Email:</strong> minyechil21@gmail.com</p>
+          <p><strong>Phone:</strong> +886905234223</p>
+          <p>
+            <a href="assets/CV-Minyechil Alehegn Tefera.pdf" target="_blank">[CV]</a>
+            <a href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en" target="_blank">[Google Scholar]</a>
+            <a href="https://github.com/minyechil21" target="_blank">[GitHub]</a>
+          </p>
+        </div>
       </div>
-      <div>
-        <img src="your-photo.jpg" alt="Minyechil Alehegn" class="profile-img" />
+      <div class="right">
+        <img src="your-photo.jpg" alt="Profile Photo" />
       </div>
     </div>
 
-    <h2>About me</h2>
+    <div class="section-title">About Me</div>
     <p>
-      I am a PhD candidate in the Department of Electrical Engineering at National Taipei University of Technology, Taiwan.
-      My research interests include fiber optic sensors, trustworthy AI, meta-learning, and smart healthcare systems.
-      I have published extensively on advanced FBG systems, deep learning for signal denoising, and sensor-based diagnostics.
+      I am a PhD candidate in the Department of Electrical Engineering at National Taipei University of Technology. My research focuses on fiber optic sensors, meta-learning, AI for health applications, and trustworthy machine learning systems. I actively collaborate with international researchers on multi-disciplinary sensing and prediction systems.
     </p>
 
     <p class="highlight">
-      I'm actively looking for self-motivated collaborators and postdoc/industry opportunities in 2025. Please feel free to contact me!
+      I'm actively looking for postdoc and research opportunities starting in 2025. Please feel free to contact me at <strong>minyechil21@gmail.com</strong>.
     </p>
 
-    <h2>Publications</h2>
+    <div class="section-title">Publications</div>
     <ul>
-      <li>M. A. Tefera et al., "Enhanced Fiber Bragg Grating Interrogation...", IEEE Sensors Journal, 2025.</li>
-      <li>M. A. Tefera et al., "Advanced Denoising and Meta-Learning...", Future Internet, 2024.</li>
-      <li>M. A. Tefera et al., "Meta-Learning for Boosting the Sensing Quality...", IEEE Sensors Journal, 2023.</li>
-      <!-- Add more as needed -->
+      <li>Minyechil Alehegn Tefera, Yared Chanie Manie, Chi-Kuang Yao, Tsung-Pei Fan, and Po-Chen Peng, "Enhanced Fiber Bragg Grating Interrogation Using Deep Learning and Fabry–Pérot Liquid Crystal: A CGAN-CNN for Improved Wavelength Detection," <i>IEEE Sensors Journal</i>, 2025.</li>
+      
+      <li>Minyechil Alehegn Tefera, Abdulmumeen Mohammed Dehnaw, Yared Chanie Manie, Chi-Kuang Yao, Samuel Debela Bogale, and Po-Chen Peng, "Advanced Denoising and Meta-Learning Techniques for Enhancing Smart Health Monitoring Using Wearable Sensors," <i>Future Internet</i>, vol. 16, 280, 2024.</li>
+
+      <li>Minyechil Alehegn Tefera, Yared Chanie Manie, Chi-Kuang Yao, Tsung-Pei Fan, and Po-Chen Peng, "Meta-Learning for Boosting the Sensing Quality and Utility of FSO-Based Multi-Channel FBG Sensor System," <i>IEEE Sensors Journal</i>, 2023.</li>
+
+      <li>Samuel Debela Bogale, Chi-Kuang Yao, Yared Chanie Manie, Abdulmumeen Mohammed Dehnaw, Minyechil Alehegn Tefera, Wen-Lung Li, Zong-Guo Zhong, and Po-Chen Peng, “Demodulating Optical Wireless Communication of FBG Sensing with Turbulence-Caused Noise by Stacked Denoising Autoencoders and the Deep Belief Network,” <i>Electronics</i>, 2024.</li>
+
+      <li>Minyechil Alehegn, “Application of Machine Learning and Deep Learning for the Prediction of HIV/AIDS,” <i>HIV & AIDS Review</i>, 2022.</li>
+
+      <li>Minyechil Araya and Minyechil Alehegn, “Text to Speech Synthesizer for Tigrigna Linguistic Using Concatenative Based Approach with LSTM Model,” <i>Indian Journal of Science and Technology</i>, 2022.</li>
+
+      <li>Prashant A. Shelar, Prashant N. Mahalle, Ganesh R. Shinde, Harish R. Bhapkar, and Minyechil Alehegn Tefera, “Performance-Aware Green Algorithm for Clustering of Underwater Wireless Sensor Network Based on Optical Signal-to-Noise Ratio,” <i>Mathematical Problems in Engineering</i>, 2022.</li>
+
+      <li>Chi-Chun Lin, Han Liang, Tzu Su, and Minyechil Alehegn Tefera, “Multi-Criteria Decision-Making Approach for Analyzing Competency Model of Technology Managers,” <i>Mathematical Problems in Engineering</i>, 2022.</li>
+
+      <li>Minyechil Alehegn and Rahul Raghvendra Joshi, “Type II Diabetes Prediction Using Combo of SVM, ANN and Random Tree,” <i>International Journal of Engineering and Advanced Technology</i>, 2019.</li>
+
+      <li>Minyechil Alehegn, Rahul Raghvendra Joshi, and P. Mulay, “Diabetes Analysis and Prediction Using Random Forest, KNN, Naïve Bayes, And J48: An Ensemble Approach,” <i>International Journal of Scientific & Technology Research</i>, 2019.</li>
+
+      <li>Minyechil Alehegn, Rahul Raghvendra Joshi, and P. Mulay, “Analysis and Prediction of Diabetes Mellitus Using Machine Learning Algorithm,” <i>International Journal of Pure and Applied Mathematics</i>, 2018.</li>
     </ul>
-
-    <h2>Education</h2>
-    <p><strong>PhD, Electrical Engineering</strong> – NTUT, Taiwan (Expected July 2025)</p>
-    <p><strong>M.Tech, Computer Science</strong> – Symbiosis International University, 2018</p>
-    <p><strong>BSc, Information Technology</strong> – Wollega University, 2014</p>
-
-    <h2>Experience</h2>
-    <p><strong>Mizan Tepi University</strong> – Lecturer / Assistant Professor (2014–2022)</p>
-    <p><strong>NTUT, Taiwan</strong> – TA in Fiber Optic Sensors & AI (2023–2024)</p>
-
-    <h2>Skills</h2>
-    <p>Python, R, C++, TensorFlow, Keras, Optical Sensor Systems</p>
 
   </div>
 
