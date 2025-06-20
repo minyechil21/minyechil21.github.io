@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minyechil Alehegn Tefera</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #eef3f9; color: #2c3e50; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Inter", sans-serif;
+      background: #eef3f9;
+      color: #2c3e50;
+    }
     header {
       background: linear-gradient(90deg, #003366, #0055a5);
       color: white;
       padding: 2rem;
       text-align: center;
     }
-    header h1 { font-size: 2.5rem; }
-    header p { font-size: 1.2rem; margin-top: 0.5rem; }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
     nav {
       display: flex;
       justify-content: center;
@@ -34,7 +50,9 @@
       font-weight: 600;
       transition: background 0.3s;
     }
-    nav button:hover { background: #3399ff; }
+    nav button:hover {
+      background: #3399ff;
+    }
     section {
       display: none;
       max-width: 900px;
@@ -42,120 +60,211 @@
       background: white;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    .active { display: block; }
+    .active {
+      display: block;
+    }
     h2 {
       color: #004080;
       border-left: 5px solid #004080;
       padding-left: 10px;
       margin-bottom: 1rem;
     }
-    ul { list-style: disc; padding-left: 2rem; }
-    li { margin-bottom: 0.7rem; line-height: 1.6; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    ul {
+      list-style: disc;
+      padding-left: 2rem;
+    }
+    li {
+      margin-bottom: 0.7rem;
+      line-height: 1.6;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
     footer {
-  background-color: #003366;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-  margin: 2rem auto 0;
-  width: 100%;
-  max-width: 900px;
-  border-top-left-radius: 0 0;
-  border-top-right-radius: 0 0;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
-}
-    footer a { color: #ffcc00; margin: 0 0.5rem; }
+      background-color: #003366;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      margin: 2rem auto 0;
+      width: 100%;
+      max-width: 900px;
+      border-top-left-radius: 0 0;
+      border-top-right-radius: 0 0;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    }
+    footer a {
+      color: #ffcc00;
+      margin: 0 0.5rem;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Minyechil Alehegn Tefera</h1>
+    <p>PhD Candidate | Optical Sensing & AI | Biomedical Applications</p>
+  </header>
 
-<header>
-  <h1>Minyechil Alehegn Tefera</h1>
-  <p>PhD Candidate | Optical Sensing & AI | Biomedical Applications</p>
-</header>
+  <nav>
+    <button onclick="showSection('bio')">Home</button>
+    <button onclick="showSection('publications')">Publications</button>
+    <button onclick="showSection('research')">Research</button>
+    <button onclick="showSection('certificates')">Certificates</button>
+    <button onclick="showSection('awards')">Awards</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
 
-<nav>
-  <button onclick="showSection('bio')">Home</button>
-  <button onclick="showSection('publications')">Publications</button>
-  <button onclick="showSection('research')">Research</button>
-  <button onclick="showSection('awards')">Certificates & Awards</button>
-  <button onclick="showSection('contact')">Contact</button>
-</nav>
+  <section id="bio" class="active">
+    <h2>Biography</h2>
+    <p>
+      I am a doctoral researcher at NTUT, Taiwan, with a strong academic
+      foundation in fiber optics and artificial intelligence. My work explores
+      intelligent sensing systems, particularly for healthcare and smart
+      monitoring.
+    </p>
+    <p>
+      My interests span signal processing, deep learning architectures, and the
+      optimization of optoelectronic systems. I have also contributed to
+      projects on disease prediction and speech synthesis for underrepresented
+      languages.
+    </p>
+    <p>
+      <a href="assets/CV-Minyechil Alehegn Tefera.pdf" target="_blank">CV</a>
+      |
+      <a
+        href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en"
+        target="_blank"
+        >Google Scholar</a
+      >
+      |
+      <a href="https://www.linkedin.com/in/minyechil" target="_blank"
+        >LinkedIn</a
+      >
+    </p>
+  </section>
 
-<section id="bio" class="active">
-  <h2>Biography</h2>
-  <p>I am a doctoral researcher at NTUT, Taiwan, with a strong academic foundation in fiber optics and artificial intelligence. My work explores intelligent sensing systems, particularly for healthcare and smart monitoring.</p>
-  <p>My interests span signal processing, deep learning architectures, and the optimization of optoelectronic systems. I have also contributed to projects on disease prediction and speech synthesis for underrepresented languages.</p>
-  <p>
-    <a href="assets/CV-Minyechil Alehegn Tefera.pdf" target="_blank">CV</a> |
-    <a href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-    <a href="https://www.linkedin.com/in/minyechil" target="_blank">LinkedIn</a>
-  </p>
-</section>
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>
+        M. A. Tefera, Y. C. Manie, C.-K. Yao, T.-P. Fan, and P.-C. Peng,
+        "Enhanced Fiber Bragg Grating Interrogation Using Deep Learning and
+        Fabry–Pérot Liquid Crystal: A CGAN-CNN for Improved Wavelength Detection,"
+        IEEE Sensors Journal, 2025.
+      </li>
+      <li>
+        Tefera, M.A.; Dehnaw, A.M.; Manie, Y.C.; Yao, C.-K.; Bogale, S.D.; Peng,
+        P.-C., "Advanced Denoising and Meta-Learning Techniques for Enhancing Smart
+        Health Monitoring Using Wearable Sensors," Future Internet, 16, 280, 2024.
+      </li>
+      <li>
+        M. A. Tefera, Y. C. Manie, C.-K. Yao, T.-P. Fan, and P.-C. Peng,
+        "Meta-Learning for Boosting the Sensing Quality and Utility of FSO-Based
+        Multi-Channel FBG Sensor System,” IEEE Sensors Journal, 2023.
+      </li>
+      <li>
+        Bogale, S.D., Yao, C.-K., Manie, Y.C.; Dehnaw, A.M.; Tefera, M. A., W.-L.
+        Li, Z.-G. Zhong, and Peng, P.-C., “Demodulating Optical Wireless
+        Communication of FBG Sensing with Turbulence-Caused Noise by Stacked
+        Denoising Autoencoders and the Deep Belief Network,” Electronics, 2024.
+      </li>
+      <li>
+        M. Alehegn, “Application of Machine Learning and Deep Learning for the
+        Prediction of HIV/AIDS,” HIV & AIDS Review, 2022.
+      </li>
+      <li>
+        M. Araya and M. Alehegn, “Text to Speech Synthesizer for Tigrigna Linguistic
+        Using Concatenative Based Approach with LSTM Model,” Indian Journal of
+        Science and Technology, 2022.
+      </li>
+      <li>
+        P. A. Shelar, P. N. Mahalle, G. R. Shinde, H. R. Bhapkar, and M. A. Tefera,
+        “Performance-Aware Green Algorithm for Clustering of Underwater Wireless
+        Sensor Network Based on Optical Signal-to-Noise Ratio,” Mathematical
+        Problems in Engineering, 2022.
+      </li>
+      <li>
+        C. Lin, H. Liang, T. Su, and M. A. Tefera, “Multi-Criteria Decision-Making
+        Approach for Analyzing Competency Model of Technology Managers,”
+        Mathematical Problems in Engineering, 2022.
+      </li>
+      <li>
+        M. Alehegn and R. R. Joshi, “Type II Diabetes Prediction Using Combo of SVM
+        ANN and Random Tree,” International Journal of Engineering and Advanced
+        Technology, 2019.
+      </li>
+      <li>
+        Minyechil Alehegn, Rahul Raghvendra Joshi, and P. Mulay, “Diabetes Analysis
+        and Prediction Using Random Forest, KNN, Naïve Bayes, And J48: An Ensemble
+        Approach,” International Journal of Scientific & Technology Research, 2019.
+      </li>
+      <li>
+        Alehegn, M., Joshi, R., & Mulay, P., “Analysis and Prediction of Diabetes
+        Mellitus Using Machine Learning Algorithm,” International Journal of Pure
+        and Applied Mathematics, 2018.
+      </li>
+    </ul>
+  </section>
 
-<section id="publications">
-  <h2>Publications</h2>
-  <ul>
-    <li>M. A. Tefera, Y. C. Manie, C.-K. Yao, T.-P. Fan, and P.-C. Peng, "Enhanced Fiber Bragg Grating Interrogation Using Deep Learning and Fabry–Pérot Liquid Crystal: A CGAN-CNN for Improved Wavelength Detection," IEEE Sensors Journal, 2025.</li>
-    <li>Tefera, M.A.; Dehnaw, A.M.; Manie, Y.C.; Yao, C.-K.; Bogale, S.D.; Peng, P.-C., "Advanced Denoising and Meta-Learning Techniques for Enhancing Smart Health Monitoring Using Wearable Sensors," Future Internet, 16, 280, 2024.</li>
-    <li>M. A. Tefera, Y. C. Manie, C.-K. Yao, T.-P. Fan, and P.-C. Peng, "Meta-Learning for Boosting the Sensing Quality and Utility of FSO-Based Multi-Channel FBG Sensor System,” IEEE Sensors Journal, 2023.</li>
-    <li>Bogale, S.D., Yao, C.-K., Manie, Y.C.; Dehnaw, A.M.; Tefera, M. A., W.-L. Li, Z.-G. Zhong, and Peng, P.-C., “Demodulating Optical Wireless Communication of FBG Sensing with Turbulence-Caused Noise by Stacked Denoising Autoencoders and the Deep Belief Network,” Electronics, 2024.</li> 
-    <li>M. Alehegn, “Application of Machine Learning and Deep Learning for the Prediction of HIV/AIDS,” HIV & AIDS Review, 2022.</li>
-    <li>M. Araya and M. Alehegn, “Text to Speech Synthesizer for Tigrigna Linguistic Using Concatenative Based Approach with LSTM Model,” Indian Journal of Science and Technology, 2022.</li>
-    <li>P. A. Shelar, P. N. Mahalle, G. R. Shinde, H. R. Bhapkar, and M. A. Tefera, “Performance-Aware Green Algorithm for Clustering of Underwater Wireless Sensor Network Based on Optical Signal-to-Noise Ratio,” Mathematical Problems in Engineering, 2022.</li>
-    <li>C. Lin, H. Liang, T. Su, and M. A. Tefera, “Multi-Criteria Decision-Making Approach for Analyzing Competency Model of Technology Managers,” Mathematical Problems in Engineering, 2022.</li>
-    <li>M. Alehegn and R. R. Joshi, “Type II Diabetes Prediction Using Combo of SVM ANN and Random Tree,” International Journal of Engineering and Advanced Technology, 2019.</li>
-    <li>Minyechil Alehegn, Rahul Raghvendra Joshi, and P. Mulay, “Diabetes Analysis and Prediction Using Random Forest, KNN, Naïve Bayes, And J48: An Ensemble Approach,” International Journal of Scientific & Technology Research, 2019.</li>
-    <li>Alehegn, M., Joshi, R., & Mulay, P., “Analysis and Prediction of Diabetes Mellitus Using Machine Learning Algorithm,” International Journal of Pure and Applied Mathematics, 2018.</li>
-  </ul>
-</section>
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Fiber Bragg Grating Sensors</li>
+      <li>AI for Biomedical Signal Analysis</li>
+      <li>Meta-Learning in Sensing Systems</li>
+      <li>Optical Wireless Communication</li>
+      <li>Machine Learning for Health Prediction</li>
+    </ul>
+  </section>
 
-<section id="research">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Fiber Bragg Grating Sensors</li>
-    <li>AI for Biomedical Signal Analysis</li>
-    <li>Meta-Learning in Sensing Systems</li>
-    <li>Optical Wireless Communication</li>
-    <li>Machine Learning for Health Prediction</li>
-  </ul>
-</section>
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>AI Fairness & Bias – DeepLearning.AI, 2020</li>
+      <li>Using Python for Research – HarvardX, 2020</li>
+      <li>Neural Networks & Deep Learning – Coursera, 2020</li>
+    </ul>
+  </section>
 
-<section id="awards">
-  <h2>Certificates & Awards</h2>
-  <ul>
-    <li>AI Fairness & Bias – DeepLearning.AI, 2020</li>
-    <li>Using Python for Research – HarvardX, 2020</li>
-    <li>Neural Networks & Deep Learning – Coursera, 2020</li>
-    <li>Top Graduate in IT – Wollega University, 2014</li>
-    <li>Risk Award Workshop – Munich Re Foundation, 2017</li>
-  </ul>
-</section>
+  <section id="awards">
+    <h2>Awards</h2>
+    <ul>
+      <li>Top Graduate in IT – Wollega University, 2014</li>
+      <li>Risk Award Workshop – Munich Re Foundation, 2017</li>
+    </ul>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p><strong>Email:</strong> minyechil21@gmail.com</p>
-  <p><strong>Phone:</strong> +886905234223</p>
-</section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> minyechil21@gmail.com</p>
+    <p><strong>Phone:</strong> +886905234223</p>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Minyechil Alehegn Tefera. All rights reserved.</p>
-  <p>
-    <a href="mailto:minyechil21@gmail.com">Email</a> |
-    <a href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-    <a href="https://github.com/minyechil21" target="_blank">GitHub</a>
-  </p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Minyechil Alehegn Tefera. All rights reserved.</p>
+    <p>
+      <a href="mailto:minyechil21@gmail.com">Email</a> |
+      <a
+        href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en"
+        target="_blank"
+        >Google Scholar</a
+      > |
+      <a href="https://github.com/minyechil21" target="_blank">GitHub</a>
+    </p>
+  </footer>
 
-<script>
-  function showSection(id) {
-    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
-</script>
-
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach((sec) =>
+        sec.classList.remove("active")
+      );
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
 </body>
 </html>
