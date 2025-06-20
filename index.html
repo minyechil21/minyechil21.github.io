@@ -6,16 +6,34 @@
   <title>Minyechil Alehegn Tefera</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #eef3f9; color: #2c3e50; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      background: #eef3f9;
+      color: #2c3e50;
+    }
+
+    main {
+      flex: 1;
+    }
+
     header {
       background: linear-gradient(90deg, #003366, #0055a5);
       color: white;
       padding: 2rem;
       text-align: center;
     }
+
     header h1 { font-size: 2.5rem; }
     header p { font-size: 1.2rem; margin-top: 0.5rem; }
+
     nav {
       display: flex;
       justify-content: center;
@@ -24,6 +42,7 @@
       padding: 1rem;
       gap: 0.5rem;
     }
+
     nav button {
       background: #0066cc;
       color: white;
@@ -34,7 +53,9 @@
       font-weight: 600;
       transition: background 0.3s;
     }
+
     nav button:hover { background: #3399ff; }
+
     section {
       display: none;
       max-width: 900px;
@@ -44,151 +65,166 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     .active { display: block; }
+
     h2 {
       color: #004080;
       border-left: 5px solid #004080;
       padding-left: 10px;
       margin-bottom: 1rem;
     }
+
     h3 {
       color: #003366;
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
+
     ul { list-style: disc; padding-left: 2rem; margin-bottom: 2rem; }
     li { margin-bottom: 0.7rem; line-height: 1.6; }
     a { color: #0066cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
     footer {
       background-color: #003366;
       color: white;
       padding: 1.5rem;
       text-align: center;
-      margin: 2rem auto 0;
       width: 100%;
       max-width: 900px;
+      margin: 0 auto;
       border-top-left-radius: 0 0;
       border-top-right-radius: 0 0;
       box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
     }
+
     footer a { color: #ffcc00; margin: 0 0.5rem; }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Minyechil Alehegn Tefera</h1>
-  <p>PhD Candidate | Optical Sensing & AI | Biomedical Applications</p>
-</header>
+  <header>
+    <h1>Minyechil Alehegn Tefera</h1>
+    <p>PhD Candidate | Optical Sensing & AI | Biomedical Applications</p>
+  </header>
 
-<nav>
-  <button onclick="showSection('bio')">Home</button>
-  <button onclick="showSection('experience')">Experience</button>
-  <button onclick="showSection('publications')">Publications</button>
-  <button onclick="showSection('research')">Research</button>
-  <button onclick="showSection('certAwards')">Certificates & Awards</button>
-  <button onclick="showSection('contact')">Contact</button>
-</nav>
+  <nav>
+    <button onclick="showSection('bio')">Home</button>
+    <button onclick="showSection('experience')">Experience</button>
+    <button onclick="showSection('publications')">Publications</button>
+    <button onclick="showSection('research')">Research</button>
+    <button onclick="showSection('certAwards')">Certificates & Awards</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
 
-<section id="bio" class="active">
-  <h2>Biography</h2>
-  <p>I am a doctoral researcher at NTUT, Taiwan, with a strong academic foundation in fiber optics and artificial intelligence. My work explores intelligent sensing systems, particularly for healthcare and smart monitoring.</p>
-  <p>My interests span signal processing, deep learning architectures, and the optimization of optoelectronic systems. I have also contributed to projects on disease prediction and speech synthesis for underrepresented languages.</p>
-  <p>
-    <a href="assets/CV-Minyechil Alehegn Tefera.pdf" target="_blank">CV</a> |
-    <a href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-    <a href="https://www.linkedin.com/in/minyechil" target="_blank">LinkedIn</a>
-  </p>
-</section>
+  <main>
+    <section id="bio" class="active">
+      <h2>Biography</h2>
+      <p>I am a doctoral researcher at NTUT, Taiwan, with a strong academic foundation in fiber optics and artificial intelligence. My work explores intelligent sensing systems, particularly for healthcare and smart monitoring.</p>
+      <p>My interests span signal processing, deep learning architectures, and the optimization of optoelectronic systems. I have also contributed to projects on disease prediction and speech synthesis for underrepresented languages.</p>
+      <p>
+        <a href="assets/CV-Minyechil Alehegn Tefera.pdf" target="_blank">CV</a> |
+        <a href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+        <a href="https://www.linkedin.com/in/minyechil" target="_blank">LinkedIn</a>
+      </p>
+    </section>
 
-<section id="experience">
-  <h2>Experience</h2>
+    <section id="experience">
+      <h2>Experience</h2>
 
-  <h3>Education</h3>
-  <ul>
-    <li><strong>National Taipei University of Technology, Taiwan</strong><br>Ph.D. in Electrical Engineering & Computer Science (2021 - Present)<br>Advisor: Prof. Tan-Hsu Tan<br>Co-Advisor: Prof. Peng-Chun Peng</li>
-    <li><strong>Bu-Ali Sina University, Hamadan, Iran</strong><br>M.Sc. in Electrical Engineering (2015 - 2017)<br>Advisor: Dr. Hamidreza Karami</li>
-    <li><strong>Hamedan University of Technology, Iran</strong><br>B.Sc. in Electrical Engineering (2010 - 2015)<br>Advisor: Dr. Hamidreza Karami</li>
-  </ul>
+      <h3>Education</h3>
+      <ul>
+        <li>
+          <strong>National Taipei University of Technology, Taiwan</strong><br>
+          PhD Candidate in Electrical Engineering and Computer Science<br>
+          CGPA: 4.00/4.00 (1st rank)<br>
+          Expected graduation: July 2025
+        </li>
+        <li>
+          <strong>Symbiosis International University, India</strong><br>
+          M.Tech in Computer Science and Engineering<br>
+          Sep. 2016 – June 2018<br>
+          CGPA: 7.72/10.00
+        </li>
+        <li>
+          <strong>Wollega University, Ethiopia</strong><br>
+          BSc in Information Technology<br>
+          CGPA: 3.81/4.00 (1st rank)<br>
+          June 2014<br>
+          Honors: Recognition of excellent performance from Wollega University
+        </li>
+      </ul>
 
-  <h3>Research & Work Experience</h3>
-  <ul>
-    <li><strong>Machine Learning Engineer Intern – DET-FW | SHL Medical, Taiwan</strong><br>June 2023 – Present<br>Developing ML for IoT devices, Deep Learning algorithm tuning, Data Analysis, Signal Processing, and Software Development.</li>
-    <li><strong>Research Assistant – Wireless Communications Lab, NTUT</strong><br>Feb 2021 – Present<br>Python development, inverse design using DL, LSTM in optics, deep neural networks.</li>
-    <li><strong>Research Assistant – Optoelectronic Signal Processing Lab, NTUT</strong><br>Mar 2021 – Present<br>FBG sensors analysis, DNN-based interrogation systems, optical communication.</li>
-    <li><strong>Research Assistant – Bu-Ali Sina University, Iran</strong><br>Feb 2015 – Dec 2017<br>Metamaterial design, ECG signal analysis, THz antenna simulation for photodetectors.</li>
-  </ul>
+      <h3>Academic & Administrative Experience</h3>
+      <ul>
+        <li><strong>Mizan Tepi University</strong><br>
+          Assistant Lecturer (2014–2016)<br>
+          Lecturer (Oct. 2018 – 2022)<br>
+          Assistant Professor (with MSc) – Jan 2022<br>
+          Chair of Information Technology Department (Oct. 2018 – Sep. 2020)<br>
+          Associate Registrar (Oct. 2020 – Present)
+        </li>
+      </ul>
+    </section>
 
-  <h3>Teaching Experience</h3>
-  <ul>
-    <li><strong>English Language Teacher</strong> – American Eagle Institute, Taiwan (Spring 2022)</li>
-    <li><strong>TA – Electromagnetic</strong> – Bu-Ali Sina University (Fall 2016)</li>
-    <li><strong>TA – Electronics I</strong> – Hamedan University of Technology (Fall 2014)</li>
-  </ul>
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>M. A. Tefera et al., "Enhanced Fiber Bragg Grating Interrogation..." IEEE Sensors Journal, 2025.</li>
+        <!-- Add other publications here -->
+      </ul>
+    </section>
 
-  <h3>Community Involvement</h3>
-  <ul>
-    <li><strong>Robotic Team Member</strong> – Hamedan University of Technology (2013 – 2014)<br>Worked on code and testing for a line follower robot.</li>
-  </ul>
-</section>
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Fiber Bragg Grating Sensors</li>
+        <li>AI for Biomedical Signal Analysis</li>
+        <li>Meta-Learning in Sensing Systems</li>
+        <li>Optical Wireless Communication</li>
+        <li>Machine Learning for Health Prediction</li>
+      </ul>
+    </section>
 
-<section id="publications">
-  <h2>Publications</h2>
-  <ul>
-    <!-- Your publications list here -->
-    <li>M. A. Tefera et al., "Enhanced Fiber Bragg Grating Interrogation..." IEEE Sensors Journal, 2025.</li>
-    <!-- ... continued -->
-  </ul>
-</section>
+    <section id="certAwards">
+      <h2>Certificates & Awards</h2>
 
-<section id="research">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Fiber Bragg Grating Sensors</li>
-    <li>AI for Biomedical Signal Analysis</li>
-    <li>Meta-Learning in Sensing Systems</li>
-    <li>Optical Wireless Communication</li>
-    <li>Machine Learning for Health Prediction</li>
-  </ul>
-</section>
+      <h3>Certificates</h3>
+      <ul>
+        <li>AI Fairness & Bias – DeepLearning.AI, 2020</li>
+        <li>Using Python for Research – HarvardX, 2020</li>
+        <li>Neural Networks & Deep Learning – Coursera, 2020</li>
+      </ul>
 
-<section id="certAwards">
-  <h2>Certificates & Awards</h2>
-  <h3>Certificates</h3>
-  <ul>
-    <li>AI Fairness & Bias – DeepLearning.AI, 2020</li>
-    <li>Using Python for Research – HarvardX, 2020</li>
-    <li>Neural Networks & Deep Learning – Coursera, 2020</li>
-  </ul>
-  <h3>Awards</h3>
-  <ul>
-    <li>Top Graduate in IT – Wollega University, 2014</li>
-    <li>Risk Award Workshop – Munich Re Foundation, 2017</li>
-  </ul>
-</section>
+      <h3>Awards</h3>
+      <ul>
+        <li>Top Graduate in IT – Wollega University, 2014</li>
+        <li>Risk Award Workshop – Munich Re Foundation, 2017</li>
+      </ul>
+    </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p><strong>Email:</strong> minyechil21@gmail.com</p>
-  <p><strong>Phone:</strong> +886905234223</p>
-</section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> minyechil21@gmail.com</p>
+      <p><strong>Phone:</strong> +886905234223</p>
+    </section>
+  </main>
 
-<footer>
-  <p>&copy; 2025 Minyechil Alehegn Tefera. All rights reserved.</p>
-  <p>
-    <a href="mailto:minyechil21@gmail.com">Email</a> |
-    <a href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-    <a href="https://github.com/minyechil21" target="_blank">GitHub</a>
-  </p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Minyechil Alehegn Tefera. All rights reserved.</p>
+    <p>
+      <a href="mailto:minyechil21@gmail.com">Email</a> |
+      <a href="https://scholar.google.com/citations?user=RGIbVcEAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+      <a href="https://github.com/minyechil21" target="_blank">GitHub</a>
+    </p>
+  </footer>
 
-<script>
-  function showSection(id) {
-    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
-</script>
-
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
