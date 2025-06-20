@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Minyechil Alehegn Tefera</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
@@ -74,6 +74,7 @@
     ul {
       list-style: disc;
       padding-left: 2rem;
+      margin-bottom: 2rem;
     }
     li {
       margin-bottom: 0.7rem;
@@ -114,8 +115,7 @@
     <button onclick="showSection('bio')">Home</button>
     <button onclick="showSection('publications')">Publications</button>
     <button onclick="showSection('research')">Research</button>
-    <button onclick="showSection('certificates')">Certificates</button>
-    <button onclick="showSection('awards')">Awards</button>
+    <button onclick="showSection('certAwards')">Certificates & Awards</button>
     <button onclick="showSection('contact')">Contact</button>
   </nav>
 
@@ -222,21 +222,32 @@
     </ul>
   </section>
 
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <ul>
+  <section id="certAwards">
+    <h2>Certificates & Awards</h2>
+
+    <!-- Combined list shown initially -->
+    <ul id="combinedList">
       <li>AI Fairness & Bias – DeepLearning.AI, 2020</li>
       <li>Using Python for Research – HarvardX, 2020</li>
       <li>Neural Networks & Deep Learning – Coursera, 2020</li>
-    </ul>
-  </section>
-
-  <section id="awards">
-    <h2>Awards</h2>
-    <ul>
       <li>Top Graduate in IT – Wollega University, 2014</li>
       <li>Risk Award Workshop – Munich Re Foundation, 2017</li>
     </ul>
+
+    <!-- Split lists hidden initially -->
+    <div id="splitLists" style="display:none;">
+      <h3>Certificates</h3>
+      <ul>
+        <li>AI Fairness & Bias – DeepLearning.AI, 2020</li>
+        <li>Using Python for Research – HarvardX, 2020</li>
+        <li>Neural Networks & Deep Learning – Coursera, 2020</li>
+      </ul>
+      <h3>Awards</h3>
+      <ul>
+        <li>Top Graduate in IT – Wollega University, 2014</li>
+        <li>Risk Award Workshop – Munich Re Foundation, 2017</li>
+      </ul>
+    </div>
   </section>
 
   <section id="contact">
@@ -263,8 +274,35 @@
       document.querySelectorAll("section").forEach((sec) =>
         sec.classList.remove("active")
       );
-      document.getElementById(id).classList.add("active");
+      const section = document.getElementById(id);
+      section.classList.add("active");
+
+      // Reset Certificates & Awards to combined view when shown
+      if (id === "certAwards") {
+        document.getElementById("combinedList").style.display = "block";
+        document.getElementById("splitLists").style.display = "none";
+      }
     }
+
+    // Toggle between combined list and split lists on clicking the section title
+    document.addEventListener("DOMContentLoaded", () => {
+      const certAwardsSection = document.getElementById("certAwards");
+      certAwardsSection.querySelector("h2").style.cursor = "pointer";
+      certAwardsSection.querySelector("h2").title = "Click to toggle view";
+
+      certAwardsSection.querySelector("h2").addEventListener("click", () => {
+        const combined = document.getElementById("combinedList");
+        const split = document.getElementById("splitLists");
+
+        if (combined.style.display === "block") {
+          combined.style.display = "none";
+          split.style.display = "block";
+        } else {
+          combined.style.display = "block";
+          split.style.display = "none";
+        }
+      });
+    });
   </script>
 </body>
 </html>
